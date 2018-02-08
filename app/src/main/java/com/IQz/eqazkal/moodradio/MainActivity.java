@@ -215,7 +215,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        enableAll();
+        try {
+            enableAll();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         toastStop();
         finish();
     }
